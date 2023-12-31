@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const db = require('./dbconnect');
 const storeroutes = require('./route/storeroute');
 const app = express();
-const port = 3200;
+const port = process.env.PORT || 3200;
 
 app.use(bodyParser.json());
 app.use(cors());
